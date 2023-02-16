@@ -21,7 +21,10 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	db.Init()
+	err = db.Init()
+	if err != nil {
+		panic(err)
+	}
 	router, err := setupRouter()
 	if err != nil {
 		panic(err)
